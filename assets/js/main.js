@@ -32,3 +32,11 @@
 function closeSection() {
   document.getElementById("closeable-section").style.display = "none";
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    modal.show();
+  }, 5000);
+});
