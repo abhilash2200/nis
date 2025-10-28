@@ -402,6 +402,7 @@ a {
   background-image: url(../img/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
   height: auto;
   position: relative;
   background-position: right;
@@ -494,6 +495,36 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 1600px) {
+  .main-banner {
+    max-width: 1200px;
+  }
+  .bannetetx {
+    padding: 150px 0px;
+  }
+  .bannetetx h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .bannetetx h6 {
+    font-size: 25px;
+  } 
+}
+@media (max-width: 1500px) {
+  .main-banner {
+    max-width: 1200px;
+  }
+  .bannetetx {
+    padding: 150px 0px;
+  }
+  .bannetetx h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .bannetetx h6 {
+    font-size: 25px;
+  } 
+}
 @media (max-width: 1400px) {
   .main-banner {
     max-width: 1200px;
