@@ -1084,6 +1084,9 @@ h4 {
 .cssbuttons-io-button:active .icon {
   transform: scale(0.95);
 }
+.sticky-footer {
+  display: none;
+}
 
 #enq {
   font-size: 30px;
@@ -1158,18 +1161,7 @@ select option {
   color: black;
 }
 
-.appli {
-  background: linear-gradient(
-    289deg,
-    rgba(44, 76, 133, 1) 4%,
-    rgba(23, 201, 210, 1) 100%
-  );
-  color: #fff;
-  padding: 10px 30px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 10px;
-}
+
 
 .apply {
   position: fixed;
@@ -1311,10 +1303,7 @@ select option {
     z-index: 999;
   }
 
-  .appli {
-    border-radius: 0px;
-    text-align: center;
-  }
+
 
   .text-gray {
     font-size: 10px;
@@ -1459,3 +1448,55 @@ select option {
     display: none;
   }
 }
+
+
+@media screen and (max-width: 767px) {
+  .footer-btn {
+      flex: 1;
+      color: #fff;
+      font-size: 17px;
+      text-decoration: none;
+      padding: 10px 0;
+      display: flex
+;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: background-color .3s, transform .2s;
+  }
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, .2);
+    z-index: 1000;
+    display: flex
+  ;
+    justify-content: space-around;
+  }
+  
+  .footer-btn.phone, .footer-btn.whatsapp {
+    background-color: #0975bd;
+  }
+  .appli {
+    background: linear-gradient(
+      289deg,
+      rgba(44, 76, 133, 1) 4%,
+      rgba(23, 201, 210, 1) 100%
+    );
+    color: #fff;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .appli {
+    border-radius: 0px;
+    text-align: center;
+  }
+}
+
+
+
