@@ -603,6 +603,13 @@ a {
   .banner-text h6 {
     font-size: 20px;
   } 
+  .book-sec img {
+    width: 60%;
+  }
+
+  .vision-text {
+    padding: 37px 20px 30px 20px !important;
+  }
 }
 
 
