@@ -398,34 +398,83 @@ a {
   gap: 10px;
 }
 
+.banner-img {
+  position: relative !important;
+}
+
 .banner {
-  background-image: url(../img/banner.jpg);
+  /* background-image: url(../img/banner.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   width: 100%;
   height: auto;
   position: relative;
-  background-position: right;
+  /* background-position: right; */
+}
+
+.banner-text {
+  position: absolute;
+  top: 25%;
+  right: 0%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: #fff;
+  z-index: 999;
+}
+
+.content-absolute {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  background-color: #2c4c85;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.content-absolute p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 999;
+  color:#fff;
+  margin: 0 !important;
 }
 
 @media (max-width: 768px) {
   .banner {
-    background-image: url(../img/mob_banner.webp);
+    /* background-image: url(../img/mob_banner.webp);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    position: relative;
+    background-size: cover; */
+    height: auto;
+    /* position: relative; */
   }
 
-  .bannetetx {
-    padding: 50px 30px 0px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
+
+
+  .banner-text {
+    left: 0;
+    top: 25%;
+    transform: translate(0%, -25%);
+    text-align: center;
+    color: #fff;
+    z-index: 999;
+    width: 100%;
+    padding: 0 20px;
   }
 
-  .bannetetx h6 {
+  .content-absolute {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .content-absolute p {
+    font-size: 14px;
+  }
+
+  .banner-text h6 {
     font-size: 20px !important;
     font-weight: 500;
     color: #000000;
@@ -436,7 +485,7 @@ a {
     font-family: "Montserrat", serif;
   }
 
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 40px !important;
     font-weight: 500;
     color: #2c4c85;
@@ -466,7 +515,7 @@ a {
   padding: 200px 0px;
 }
 
-.bannetetx h6 {
+.banner-text h6 {
   font-size: 30px;
   font-weight: 500;
   color: #000000;
@@ -478,7 +527,7 @@ a {
   font-family: "Montserrat", serif;
 }
 
-.bannetetx h1 {
+.banner-text h1 {
   font-size: 80px;
   font-weight: 500;
   color: #2c4c85;
@@ -502,11 +551,11 @@ a {
   .bannetetx {
     padding: 150px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 60px;
     line-height: 60px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 25px;
   } 
 }
@@ -517,11 +566,11 @@ a {
   .bannetetx {
     padding: 150px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 60px;
     line-height: 60px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 25px;
   } 
 }
@@ -532,27 +581,27 @@ a {
   .bannetetx {
     padding: 150px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 60px;
     line-height: 60px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 25px;
   } 
 }
 @media (max-width: 1300px) {
-  .main-banner {
-    max-width: 1200px;
+  .banner-text {
+    /* top: 40%; */
   }
   .bannetetx {
     padding: 150px 0px;
   }
-  .bannetetx h1 {
-    font-size: 60px;
-    line-height: 60px;
+  .banner-text h1 {
+    font-size: 50px;
+    line-height: 50px;
   }
-  .bannetetx h6 {
-    font-size: 25px;
+  .banner-text h6 {
+    font-size: 20px;
   } 
 }
 
@@ -564,11 +613,11 @@ a {
   .bannetetx {
     padding: 150px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 60px;
     line-height: 60px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 25px;
   }
 }
@@ -577,25 +626,25 @@ a {
   .bannetetx {
     padding: 120px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 50px;
     line-height: 50px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 22px;
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bannetetx {
     padding: 80px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 15px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 20px;
     margin-bottom: 8px;
   }
@@ -605,12 +654,12 @@ a {
   .bannetetx {
     padding: 60px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 32px;
     line-height: 35px;
     margin-bottom: 12px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 18px;
     margin-bottom: 6px;
     letter-spacing: 0.5px;
@@ -621,17 +670,17 @@ a {
   .bannetetx {
     padding: 40px 0px;
   }
-  .bannetetx h1 {
+  .banner-text h1 {
     font-size: 28px;
     line-height: 30px;
     margin-bottom: 10px;
   }
-  .bannetetx h6 {
+  .banner-text h6 {
     font-size: 16px;
     margin-bottom: 5px;
     letter-spacing: 0px;
   }
-}
+} */
 
 .rfd1 {
   background-color: #0c415e;
